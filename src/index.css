@@ -20,8 +20,6 @@
   --color-secondary-darker: #d38e40;
   --color-tertiary: #383838;
   --color-tertiary-darker: #303030;
-  --color-check: #ffb158;
-  --color-delete: #b61818;
 }
 
 * {
@@ -52,7 +50,21 @@ body {
 .no-task {
   font-size: 6rem;
   text-align: center;
-  
+}
+
+h6 {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 1rem;
+  font-size: 1.4rem;
+
+  & :first-child {
+    color: var(--color-primary);
+  }
+
+  & :last-child {
+    color: var(--color-secondary);
+  }
 }
 
 @media (prefers-color-scheme: light) {

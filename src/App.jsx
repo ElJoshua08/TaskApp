@@ -38,6 +38,10 @@ function App() {
         tasks={tasks}
         setTasks={setTasks}
       />
+
+      <h6>
+        Made with <span>love</span> by <span>Joshua</span>
+      </h6>
     </>
   );
 }
