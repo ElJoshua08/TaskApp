@@ -39,7 +39,7 @@ function App() {
         setTasks={setTasks}
       />
 
-      <h6>
+      <h6 className='author'>
         Made with <span>love</span> by{' '}
         <span>
           <a target='_blank' href="https://github.com/ElJoshua08">Joshua</a>

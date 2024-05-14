@@ -37,6 +37,10 @@
       rotate: 270deg;
     }
   }
+
+  @media screen and (max-width: 690px) {
+    margin-bottom: 3rem;
+  }
 }
 
 .todo-create-modal {

@@ -36,7 +36,6 @@ body {
   overflow: hidden;
 }
 
-
 #root {
   display: flex;
   align-items: center;
@@ -52,7 +51,7 @@ body {
   text-align: center;
 }
 
-h6 {
+.author {
   position: absolute;
   bottom: 0.5rem;
   right: 1rem;
@@ -68,7 +67,15 @@ h6 {
     cursor: pointer;
   }
 
+  @media screen and (max-width: 690px) {
+    font-size: 1.3rem;
+    bottom: 0.3rem;
+    right: initial;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
+
 
 @media (prefers-color-scheme: light) {
   :root {
