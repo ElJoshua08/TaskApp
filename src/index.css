@@ -1,0 +1,69 @@
+:root {
+  font-family: 'Nunito', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 300;
+
+  scroll-behavior: smooth;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --color-primary: #58a6ff;
+  --color-primary-darker: #3275c2;
+  --color-secondary: #ffb158;
+  --color-secondary-darker: #d38e40;
+  --color-tertiary: #383838;
+  --color-tertiary-darker: #303030;
+  --color-check: #ffb158;
+  --color-delete: #b61818;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  overflow: hidden;
+}
+
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  gap: 2rem;
+}
+
+.no-task {
+  font-size: 6rem;
+  text-align: center;
+  
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
