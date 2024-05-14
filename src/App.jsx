@@ -40,7 +40,10 @@ function App() {
       />
 
       <h6>
-        Made with <span>love</span> by <span>Joshua</span>
+        Made with <span>love</span> by{' '}
+        <span>
+          <a target='_blank' href="https://github.com/ElJoshua08">Joshua</a>
+        </span>
       </h6>
     </>
   );
