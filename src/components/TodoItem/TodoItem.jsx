@@ -2,7 +2,13 @@ import { useState } from 'react';
 import { FaCheck, FaTrash } from 'react-icons/fa6';
 import './TodoItem.css';
 
-const TodoItem = ({ children, isCompleted, tasks, setTasks }) => {
+const TodoItem = ({
+  children,
+  isCompleted,
+  tasks,
+  setTasks,
+  saveToLocalStorage,
+}) => {
   const [todoCompleted, setTodoCompleted] = useState(isCompleted);
 
   const deleteTask = () => {
@@ -11,6 +17,7 @@ const TodoItem = ({ children, isCompleted, tasks, setTasks }) => {
     });
 
     setTasks(newTasks);
+    saveToLocalStorage(newTasks);
   };
 
   return (
@@ -20,11 +27,24 @@ const TodoItem = ({ children, isCompleted, tasks, setTasks }) => {
       <div className="buttons">
         <FaCheck
           onClick={() => {
+            const updatedTasks = tasks.map((task) => {
+              if (task.taskName === children) {
+                // Invertir el estado de completitud de la tarea
+                return { ...task, isCompleted: !todoCompleted };
+              }
+              return task;
+            });
+
+            setTasks(updatedTasks);
             setTodoCompleted(!todoCompleted);
+            saveToLocalStorage(updatedTasks);
           }}
           className="todo-item-icon icon-check"
         />
-        <FaTrash onClick={ deleteTask } className="todo-item-icon icon-delete" />
+        <FaTrash
+          onClick={deleteTask}
+          className="todo-item-icon icon-delete"
+        />
       </div>
     </li>
   );

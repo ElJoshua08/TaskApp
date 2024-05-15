@@ -5,8 +5,17 @@ import TodoItem from './components/TodoItem/TodoItem.jsx';
 import { useState } from 'react';
 
 function App() {
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(() => {
+    const tasksFromStorage = window.localStorage.getItem('tasks_v1');
+    if (tasksFromStorage) return JSON.parse(tasksFromStorage);
+    return [];
+  });
+
   const [search, setSearch] = useState('');
+
+  const saveToLocalStorage = (newTasks) => {
+    window.localStorage.setItem('tasks_v1', JSON.stringify(newTasks));
+  };
 
   return (
     <>
@@ -26,6 +35,7 @@ function App() {
                   key={index}
                   tasks={tasks}
                   setTasks={setTasks}
+                  saveToLocalStorage={saveToLocalStorage}
                 >
                   {task.taskName}
                 </TodoItem>
@@ -37,12 +47,18 @@ function App() {
       <TodoCreate
         tasks={tasks}
         setTasks={setTasks}
+        saveToLocalStorage={saveToLocalStorage}
       />
 
-      <h6 className='author'>
+      <h6 className="author">
         Made with <span>love</span> by{' '}
         <span>
-          <a target='_blank' href="https://github.com/ElJoshua08">Joshua</a>
+          <a
+            target="_blank"
+            href="https://github.com/ElJoshua08"
+          >
+            Joshua
+          </a>
         </span>
       </h6>
     </>

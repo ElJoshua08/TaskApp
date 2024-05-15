@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { FaCheck, FaPlus } from 'react-icons/fa6';
 import './TodoCreate.css';
 
-const TodoCreate = ({ tasks, setTasks }) => {
+const TodoCreate = ({ tasks, setTasks, saveToLocalStorage }) => {
   const [createModal, setCreateModal] = useState(false);
   const [taskName, setTaskName] = useState('');
 
@@ -12,6 +12,10 @@ const TodoCreate = ({ tasks, setTasks }) => {
       return;
     }
 
+    if (tasks.find((task) => task.taskName == taskName)) {
+      alert('You can repeat task names!');
+      return
+    }
 
     const newTask = {
       taskName: taskName,
@@ -21,6 +25,7 @@ const TodoCreate = ({ tasks, setTasks }) => {
     const newTasks = [...tasks, newTask];
 
     setTasks(newTasks);
+    saveToLocalStorage(newTasks);
     setCreateModal(false);
     setTaskName('');
   };
