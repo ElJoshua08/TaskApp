@@ -76,16 +76,15 @@ body {
   }
 }
 
-
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+    background-color: #5AB2FF;
+    --color-primary: #3992a8;
+    --color-primary-darker: #277a8f;
+    --color-secondary: #f7cf3e;
+    --color-secondary-darker: #be9e2b;
+    --color-tertiary: #e0dfd7;
+    --color-tertiary-darker: #bebdb2;
   }
 }

@@ -7,7 +7,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #333;
+  background-color: var(--color-tertiary);
   margin-top: 2rem;
   flex-shrink: 0;
 
@@ -27,7 +27,7 @@
     width: 100%;
     outline: 0;
     font-size: 2rem;
-    color: #eee;
+    color: var(--color-primary);
     padding-left: 4rem;
     border: 0;
     outline: 0;
@@ -45,11 +45,11 @@
 
   &:focus,
   &:hover { 
-    border: 2px solid var(--color-primary-darker);
+    border: 2px solid var(--color-primary);
 
     & > input {
        &::placeholder {
-        color: #ccc;
+        color: var(--color-primary);
        }
     }
   }
