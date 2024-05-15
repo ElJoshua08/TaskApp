@@ -12,7 +12,7 @@
   height: 60px;
   align-items: center;
   justify-content: space-between;
-  border: 2px solid var(--color-primary);
+  border: 0;
   outline: 0;
   border-radius: 0.6rem;
   background-color: var(--color-tertiary);
