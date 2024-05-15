@@ -7,4 +7,4 @@ things todo:
 - Add some user custom config, like choose between like dark and system default mode, or deleting tasks automatically when deleted
 - Open graph
 - Add some stats like tasks done or tieme taken to did them or sthm like that
-- If i discover how, add a login and a db to store data
+- If i learn how, add a login and a db to store data
