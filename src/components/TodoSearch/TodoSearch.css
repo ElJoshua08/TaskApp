@@ -26,14 +26,21 @@
     height: 100%;
     width: 100%;
     outline: 0;
-    font-size: 2rem;
+    font-size: 2.4rem;
     color: var(--color-primary);
     padding-left: 4rem;
     border: 0;
     outline: 0;
+    letter-spacing: 1.5px;
     background-color: transparent;
     transition: all 250ms ease-in;
 
+    &:hover,
+    &:focus {
+      &::placeholder {
+        color: var(--color-primary);
+      }
+    }
 
     &::placeholder {
       color: #999;

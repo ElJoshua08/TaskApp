@@ -61,6 +61,10 @@ function App() {
           </a>
         </span>
       </h6>
+
+      <div className="decoration">
+        <span className="decoration-wave wave-1"></span>
+      </div>
     </>
   );
 }
