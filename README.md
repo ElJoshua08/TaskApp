@@ -7,3 +7,4 @@ things todo:
 - Add some stats like tasks done or time taken to did them or sthm like that
 - If i learn how, add a login and a db to store data
 - Add some info cards for when something fails
+- Add charging animation with useEffect
