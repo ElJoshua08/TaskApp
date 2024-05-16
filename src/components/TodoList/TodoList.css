@@ -51,4 +51,10 @@
   & li:last-child {
     margin-bottom: 2rem;
   }
+
+  @media screen and (max-width: 400px) {
+    & {
+      width: 95vw;
+    }
+  }
 }

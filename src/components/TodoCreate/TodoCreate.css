@@ -41,6 +41,12 @@
   @media screen and (max-width: 690px) {
     margin-bottom: 3rem;
   }
+
+  @media screen and (max-width: 400px) {
+    & {
+      width: 95vw;
+    }
+  }
 }
 
 .todo-create-modal {
@@ -50,7 +56,7 @@
   background-color: var(--color-tertiary-darker);
   bottom: 0;
   border-radius: 0.6rem 0.6rem 0 0;
-  transform: translateY(120px);
+  transform: translateY(100%);
   transition: all 350ms ease-out;
   display: flex;
   align-items: center;
@@ -105,6 +111,12 @@
     &:hover {
       color: var(--color-secondary);
       scale: 1.05;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    & {
+      width: 100vw;
     }
   }
 }

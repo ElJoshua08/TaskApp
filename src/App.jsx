@@ -51,7 +51,7 @@ function App() {
       />
 
       <h6 className="author">
-        Made with <span>love</span> by{' '}
+        Made with <span>love</span> by {' '}
         <span>
           <a
             target="_blank"

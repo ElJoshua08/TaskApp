@@ -44,6 +44,7 @@ body {
   width: 100vw;
   height: 100vh;
   gap: 2rem;
+  /* overflow: hidden; */
 }
 
 .decoration {
@@ -68,7 +69,7 @@ body {
 }
 
 .no-task {
-  font-size: 6rem;
+  font-size: clamp(1rem, 10vw, 25rem); 
   text-align: center;
 }
 
@@ -77,6 +78,7 @@ body {
   bottom: 0.5rem;
   right: 1rem;
   font-size: 1.4rem;
+  z-index: -1;
 
   & :first-child {
     color: var(--color-primary);
@@ -94,12 +96,14 @@ body {
     right: initial;
     left: 50%;
     transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    
   }
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
     background-color: #5ab2ff;
     --color-primary: #3992a8;
     --color-primary-darker: #277a8f;
