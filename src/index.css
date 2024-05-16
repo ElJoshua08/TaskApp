@@ -107,12 +107,17 @@ body {
 
 @media (prefers-color-scheme: light) {
   :root {
-    background-color: #5ab2ff;
+    background-color: #e0dfd7;
     --color-primary: #3992a8;
     --color-primary-darker: #277a8f;
-    --color-secondary: #f7cf3e;
-    --color-secondary-darker: #be9e2b;
-    --color-tertiary: #e0dfd7;
-    --color-tertiary-darker: #bebdb2;
+    --color-secondary: #c6a632;
+    --color-secondary-darker: #8b7423;
+    --color-tertiary: #acacde;
+    --color-tertiary-darker: #8a8ab2;
+    color: #333;
+  }
+
+  .decoration {
+    display: none;
   }
 }

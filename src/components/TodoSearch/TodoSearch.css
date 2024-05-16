@@ -66,4 +66,12 @@
       width: 95vw;
     }
   }
+
+  @media screen and (prefers-color-scheme: light) {
+      & > input {
+      &::placeholder {
+        color: #dadada;
+      }
+    }
+  }
 }
