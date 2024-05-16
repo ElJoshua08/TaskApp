@@ -30,6 +30,8 @@
 
 html {
   font-size: 62.5%;
+  overflow: hidden;
+
 }
 
 body {
@@ -44,7 +46,7 @@ body {
   width: 100vw;
   height: 100vh;
   gap: 2rem;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .decoration {
