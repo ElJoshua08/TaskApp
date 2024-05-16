@@ -25,6 +25,7 @@
   background-color: var(--color-tertiary);
   border-radius: 0.6rem;
   list-style: none;
+  transition: all 250ms ease-out;
 
   &::-webkit-scrollbar {
     background-color: var(--color-tertiary-darker);
@@ -52,7 +53,7 @@
     margin-bottom: 2rem;
   }
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 420px) {
     & {
       width: 95vw;
     }

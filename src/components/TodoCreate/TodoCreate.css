@@ -16,7 +16,7 @@
   outline: 0;
   border-radius: 0.6rem;
   background-color: var(--color-tertiary);
-  transition: all 350ms ease-out;
+  transition: all 250ms ease-out;
   flex-shrink: 0;
 
   & > h2 {
@@ -114,7 +114,7 @@
     }
   }
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 420px) {
     & {
       width: 100vw;
     }
