@@ -8,6 +8,3 @@ things todo:
 - Open graph
 - Add some stats like tasks done or tieme taken to did them or sthm like that
 - If i learn how, add a login and a db to store data
-
-FIX:
-  - Responsive design not working
