@@ -1,7 +1,7 @@
 A simple todo app,
 
 things todo:
-- Make a custom hook for local storage an easier use
+- Make a custom hook for an easier local storage use
 - Add some user custom config, like choose between like dark, light and system default theme, or deleting tasks automatically when completed
 - Open graph
 - Add some stats like tasks done or time taken to did them or sthm like that
