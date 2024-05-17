@@ -1,0 +1,25 @@
+.todo-config {
+  position: fixed;
+  font-size: 14px;
+  top: 2rem;
+  right: 2rem;
+  cursor: pointer;
+  padding: 1.2rem;
+  background-color: var(--color-tertiary);
+  color: #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.6rem;
+  border: 2px solid transparent;
+  transition: all 350ms ease;
+
+  &:hover {
+    border: 2px solid var(--color-primary-darker);
+  }
+
+  &.is-active {
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+  }
+}

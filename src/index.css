@@ -58,7 +58,7 @@ body {
   transition: all 250ms ease-out;
 
   @media screen and (max-width: 420px) {
-    width: 95vw;
+    width: 75vw;
   }
 }
 

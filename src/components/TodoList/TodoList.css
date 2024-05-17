@@ -55,7 +55,7 @@
 
   @media screen and (max-width: 420px) {
     & {
-      width: 95vw;
+      width: 75vw;
     }
   }
 }
