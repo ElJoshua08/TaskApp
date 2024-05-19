@@ -107,7 +107,6 @@ body {
   z-index: -1;
 
   & :first-child {
-    font-size: 7rem;
     color: var(--color-primary);
   }
 
