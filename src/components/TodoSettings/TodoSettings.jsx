@@ -1,7 +1,7 @@
 import './TodoSettings.css';
 import { FaGear } from 'react-icons/fa6';
 
-const TodoSettings = ({children, settingsActive, setSettingsActive}) => {
+const TodoSettings = ({ children, settingsActive, setSettingsActive }) => {
   const handleClick = () => {
     let newSettingsActive = !settingsActive;
 
@@ -9,14 +9,9 @@ const TodoSettings = ({children, settingsActive, setSettingsActive}) => {
   };
 
   return (
-    <div
-      onClick={handleClick}
-      className={`todo-settings ${settingsActive ? 'is-active' : ''}`}
-    >
-      <FaGear />
-      <div className="settings">
-        {children}
-      </div>
+    <div className={`todo-settings ${settingsActive ? 'is-active' : ''}`}>
+      <FaGear onClick={handleClick} className='todo-settings-icon' />
+      <div className="settings">{children}</div>
     </div>
   );
 };
