@@ -1,8 +1,9 @@
+import './SettingItem.css';
 
-const ConfigItem = () => {
-  return (<div>
+const SettingItem = ({ settingsActive }) => {
+  return (
+    <div className={` setting-item ${settingsActive ? 'is-active' : ''}`}></div>
+  );
+};
 
-  </div>)
-}
-
-export default ConfigItem
+export default SettingItem;

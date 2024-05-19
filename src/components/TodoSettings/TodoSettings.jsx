@@ -1,10 +1,7 @@
-import { useState } from 'react';
 import './TodoSettings.css';
 import { FaGear } from 'react-icons/fa6';
 
-const TodoSettings = () => {
-  const [settingsActive, setSettingsActive] = useState(false);
-
+const TodoSettings = ({children, settingsActive, setSettingsActive}) => {
   const handleClick = () => {
     let newSettingsActive = !settingsActive;
 
@@ -14,9 +11,12 @@ const TodoSettings = () => {
   return (
     <div
       onClick={handleClick}
-      className={`todo-config ${settingsActive ? 'is-active' : ''}`}
+      className={`todo-settings ${settingsActive ? 'is-active' : ''}`}
     >
       <FaGear />
+      <div className="settings">
+        {children}
+      </div>
     </div>
   );
 };
