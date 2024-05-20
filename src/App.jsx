@@ -18,8 +18,6 @@ function App() {
     uncomplete: false,
   });
 
-  const [settingsActive, setSettingsActive] = useState(false);
-
   const saveToLocalStorage = (newTasks) => {
     window.localStorage.setItem('tasks_v1', JSON.stringify(newTasks));
   };
