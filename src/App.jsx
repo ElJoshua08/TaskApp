@@ -4,8 +4,6 @@ import TodoSearch from './components/TodoSearch/TodoSearch';
 import TodoItem from './components/TodoItem/TodoItem.jsx';
 import TodoFilter from './components/TodoFilter/TodoFilter.jsx';
 import { useState } from 'react';
-import TodoSettings from './components/TodoSettings/TodoSettings.jsx';
-import SettingItem from './components/SettingItem/SettingItem.jsx';
 
 function App() {
   const [tasks, setTasks] = useState(() => {
@@ -28,16 +26,6 @@ function App() {
 
   return (
     <>
-      <TodoSettings
-        setSettingsActive={setSettingsActive}
-        settingsActive={settingsActive}
-      >
-        <SettingItem settingsActive={settingsActive}>A</SettingItem>
-        <SettingItem settingsActive={settingsActive}>A</SettingItem>
-        <SettingItem settingsActive={settingsActive}>A</SettingItem>
-        <SettingItem settingsActive={settingsActive}>A</SettingItem>
-      </TodoSettings>
-
       <TodoSearch
         search={search}
         setSearch={setSearch}
