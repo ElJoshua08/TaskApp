@@ -6,7 +6,6 @@
   scroll-behavior: smooth;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -24,7 +23,7 @@
   --color-error: #ff3232;
 
   --text-primary: #fff;
-  --text-secondary: #d8d8d8;
+  --text-secondary: #cecece;
 }
 
 * {

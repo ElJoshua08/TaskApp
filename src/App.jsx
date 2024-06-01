@@ -24,7 +24,7 @@ function App() {
         <NoTask />
       )}
 
-      <CreateTask />
+      <CreateTask tasks={tasks} setTasks={setTasks} />
 
       <Author
         authorLink="https://github.com/ElJoshua08"

@@ -11,6 +11,8 @@
   justify-content: space-between;
   border: 0;
   outline: 0;
+  cursor: pointer;
+  transition: all 150ms ease;
 
   p {
     font-size: 2.2rem;
@@ -18,16 +20,100 @@
     font-weight: 500;
     letter-spacing: 1px;
     color: var(--text-secondary);
+    transition: all 150ms ease;
   }
 
   .plusIcon {
     font-size: 2.5rem;
-    color: var(--color-primary);
+    color: var(--text-secondary);
     margin-right: 1rem;
+    transition: all 150ms ease;
+  }
+
+  &:hover {
+    background-color: var(--color-primary-darker);
+
+    p,
+    .plusIcon {
+      color: var(--text-primary);
+    }
   }
 }
 
 .taskModal {
   position: fixed;
-  transform: translateY(200px);
+  bottom: 0;
+  width: 90%;
+  height: 100px;
+  border-radius: 0.5rem 0.5rem 0 0;
+  transform: translateY(100%);
+  background-color: var(--color-secondary-darker);
+  transition: all 250ms ease;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+
+  &.active {
+    transform: translateY(0);
+  }
+}
+
+.data {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.taskName {
+  flex-grow: 1;
+  height: 30px;
+  border: 2px solid transparent;
+  outline: 0;
+
+  background-color: var(--color-tertiary);
+  font-size: 2rem;
+  margin-left: 1rem;
+  border-radius: 0.5rem;
+  padding: 1.6rem 0.5rem;
+  color: var(--text-secondary);
+  transition: all 150ms ease;
+  letter-spacing: 2px;
+  font-weight: 500;
+
+  &:focus,
+  &:hover {
+    color: var(--text-primary);
+    border-color: var(--color-secondary);
+  }
+}
+
+.createIcon {
+  font-size: 2.5rem;
+  margin-right: 1rem;
+  color: var(--color-primary-darker);
+  transition: all 250ms ease;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--color-primary);
+  }
+}
+
+.closeIcon {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 2.5rem;
+  color: var(--text-secondary);
+  transition: all 250ms ease;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--text-primary);
+  }
 }
