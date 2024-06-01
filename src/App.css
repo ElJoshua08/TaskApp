@@ -1,5 +1,5 @@
 main {
-  width: calc(100% - 2.8rem /* 1rem per side */);
+  width: calc(100% - 2rem /* 1rem per side */);
   height: 100%;
 
   display: flex;
@@ -7,4 +7,5 @@ main {
   align-items: center;
   justify-content: center;
   gap: 1.4rem;
+  z-index: -1;
 }

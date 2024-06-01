@@ -7,13 +7,14 @@
   transition: all 250ms ease;
 
   strong {
-    color: var(--color-primary);
+    color: var(--color-primary-darker);
   }
 
   a {
-    color: var(--color-secondary);
+    color: var(--color-primary);
     text-decoration: none;
     cursor: pointer;
+    z-index: 999;
   }
 
   @media screen and (max-width: 690px) {
