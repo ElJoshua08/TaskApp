@@ -7,19 +7,20 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  --bg-color: #161616;
+
   --color-primary: #58a6ff;
   --color-primary-darker: #3275c2;
   --color-secondary: #ffb158;
   --color-secondary-darker: #d38e40;
-  --color-tertiary: #383838;
-  --color-tertiary-darker: #303030;
+  --color-tertiary: #171535;
+  --color-tertiary-darker: #0f0d27;
   --color-error: #ff3232;
 }
 
@@ -35,6 +36,7 @@ html {
 
 body {
   overflow: hidden;
+  background-color: var(--bg-color);
 }
 
 #root {
@@ -50,88 +52,9 @@ body {
   gap: 1rem;
 }
 
-.filters {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  width: 320px;
-  transition: all 250ms ease-out;
-
-  @media screen and (max-width: 420px) {
-    width: 75vw;
-  }
-}
-
-.decoration {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: -5;
-
-  & > .decoration-wave {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-position: top;
-    background-repeat: repeat-x;
-    z-index: inherit;
-
-    &.wave-1 {
-      background-image: url('/assets/images/decoration-wave-1.png');
-    }
-  }
-}
-
-.no-task {
-  font-size: clamp(0.6rem, 8vw, 25rem);
-  text-align: center;
-  flex-shrink: 1;
-  align-items: center;
-  line-height: 0.8;
-  position: relative;
-  margin: 3rem;
-  display: inline-block;
-  height: 100%;
-
-
-  strong {
-    color: var(--color-error);
-  }
-}
-
-.author {
-  position: absolute;
-  bottom: 0.5rem;
-  right: 1rem;
-  font-size: 1.4rem;
-  z-index: -1;
-
-  & :first-child {
-    color: var(--color-primary);
-  }
-
-  & :last-child {
-    color: var(--color-secondary);
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-  @media screen and (max-width: 690px) {
-    font-size: 1.3rem;
-    bottom: 0.3rem;
-    right: initial;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    text-align: center;
-  }
-}
-
 @media (prefers-color-scheme: light) {
   :root {
-    background-color: #e0dfd7;
+    --bg-color: #e0dfd7;
     --color-primary: #3992a8;
     --color-primary-darker: #277a8f;
     --color-secondary: #c6a632;
@@ -139,9 +62,5 @@ body {
     --color-tertiary: #acacde;
     --color-tertiary-darker: #8a8ab2;
     color: #333;
-  }
-
-  .decoration {
-    display: none;
   }
 }

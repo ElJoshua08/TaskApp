@@ -1,0 +1,28 @@
+.author {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 1rem;
+  font-size: 1.4rem;
+  z-index: -1;
+  transition: all 250ms ease;
+
+  strong {
+    color: var(--color-primary);
+  }
+
+  a {
+    color: var(--color-secondary);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 690px) {
+    font-size: 1.3rem;
+    bottom: 0.3rem;
+    right: initial;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+  }
+}

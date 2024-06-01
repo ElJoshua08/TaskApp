@@ -1,0 +1,6 @@
+.createTask {
+  position: absolute;
+  bottom: 1.4rem;
+  width: 100%;
+  background-color: var(--color-tertiary);
+}
