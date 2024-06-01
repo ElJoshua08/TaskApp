@@ -11,14 +11,14 @@ const TaskModal = () => {
 
 const CreateTask = () => {
   return (
-    <div className="createTask">
-      <button className='createTaskButton'>
-        Create a new task!
-        <FaPlus />
+    <>
+      <button className="createTaskButton">
+        <p> Create a new task! </p>
+        <FaPlus className='plusIcon' />
       </button>
-        
+
       <TaskModal />
-    </div>
+    </>
   );
 };
 

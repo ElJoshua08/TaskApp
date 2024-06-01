@@ -13,7 +13,7 @@ function App() {
 
   return (
     <main>
-      {/* TODO: Create the search and filter bars */}
+      {/* TODO: Create the search and filter bars */} 
 
       {/* TODO: Create the tasks list and create the component for when no tasks are created */}
       {tasks.length > 0 ? (
