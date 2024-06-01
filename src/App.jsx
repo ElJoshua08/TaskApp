@@ -11,6 +11,14 @@ function App() {
     return [];
   });
 
+  const saveToStorage = () => {
+    console.log('Saving to storage');
+    window.localStorage.setItem('tasks_v1', JSON.stringify(tasks));
+  };
+
+
+  saveToStorage();
+
   return (
     <main>
       {/* TODO: Create the search and filter bars */} 
