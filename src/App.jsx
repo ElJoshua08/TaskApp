@@ -13,27 +13,62 @@ function App() {
     return [];
   });
   const [search, setSearch] = useState('');
+  const [filters, setFilters] = useState({
+    completed: false,
+    incomplete: false,
+    all: true,
+  });
 
   const saveToStorage = () => {
-    console.log('Saving to storage');
     window.localStorage.setItem('tasks_v1', JSON.stringify(tasks));
   };
 
   saveToStorage();
+
+  const applyFilters = (task, filters) => {
+    for (let filter in filters) {
+      // Skip the filter if it is set to false
+      if (!filters[filter]) continue;
+
+      // Apply filter conditions
+      switch (filter) {
+        case 'completed':
+          if (filters.completed && !task.completed) return false;
+          break;
+        case 'incompleted':
+          if (filters.incompleted && task.completed) return false;
+          break;
+        case 'all':
+          // 'all' filter, always include the task
+          break;
+        default:
+          // If there are more filters added, check their conditions here
+          if (filters[filter] !== task[filter]) return false;
+      }
+    }
+    return true;
+  };
+
+  const filteredTasks = tasks
+    .filter((task) => task.name.toLowerCase().includes(search.toLowerCase()))
+    .filter((task) => applyFilters(task, filters));
+
 
   return (
     <main>
       <Logo />
 
       {/* TODO: Create the search and filter bars */}
-      <SearchBar search={search} SetSearch={setSearch} />
+      <SearchBar
+        search={search}
+        SetSearch={setSearch}
+      />
 
-      {/* TODO: Create the tasks list and create the component for when no tasks are created */}
       {tasks.length > 0 ? (
         <>
-          {tasks.map((task) => (
+          {filteredTasks.map((task) => (
             <div key={task.id}>
-              <h2>{task.name}</h2>
+              <p>{task.name}</p>
               <p>{task.description}</p>
             </div>
           ))}
