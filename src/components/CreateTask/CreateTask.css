@@ -4,7 +4,7 @@
   margin-bottom: 3rem;
   background-color: var(--color-secondary-darker);
   height: 40px;
-  width: 90%;
+  width: 250px;
   display: flex;
   border-radius: 0.5rem;
   align-items: center;
@@ -15,10 +15,10 @@
   transition: all 150ms ease;
 
   p {
-    font-size: 2.2rem;
-    margin-left: 1rem;
-    font-weight: 500;
-    letter-spacing: 1px;
+    font-size: 2.1rem;
+    margin-left: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
     color: var(--text-secondary);
     transition: all 150ms ease;
   }

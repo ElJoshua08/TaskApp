@@ -1,0 +1,42 @@
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  position: absolute;
+  top: 1rem;
+  left: 0.5rem;
+  gap: 0.5rem;
+}
+
+.logoIcon { 
+  width: 4rem;
+  cursor: pointer;
+  transition: all 150ms ease-in;
+}
+
+.logoText {
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  transition: all 150ms ease-in;
+  transform-origin: left;
+
+  strong {
+    color: var(--color-primary);
+    font-weight: 800;
+    font-size: 2.5rem;
+    display: inline-block;
+    transform: rotateZ(15deg);
+  }
+}
+
+@media (max-width: 435px) { 
+  .logoText {
+    transform: scaleX(0);
+  }
+
+  .logoIcon {
+    transform: scale(0);
+  }
+}

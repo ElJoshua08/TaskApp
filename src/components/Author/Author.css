@@ -17,7 +17,7 @@
     z-index: 999;
   }
 
-  @media screen and (max-width: 690px) {
+  @media screen and (max-width: 435px) {
     font-size: 1.3rem;
     bottom: 0.3rem;
     right: initial;
@@ -26,4 +26,4 @@
     width: 100%;
     text-align: center;
   }
-}
+} 
