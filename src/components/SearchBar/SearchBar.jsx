@@ -4,6 +4,7 @@ import './SearchBar.css';
 const SearchBar = ({ search, SetSearch }) => {
   return (
     <div className="searchBar">
+      <FaMagnifyingGlass className="searchIcon" />
 
       <input
         type="text"
@@ -12,7 +13,6 @@ const SearchBar = ({ search, SetSearch }) => {
         value={search}
         onChange={(e) => SetSearch(e.target.value)}
       />
-      <FaMagnifyingGlass className="searchIcon" />
     </div>
   );
 };
