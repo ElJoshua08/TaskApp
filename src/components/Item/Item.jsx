@@ -6,9 +6,9 @@ const Item = ({ task, setTasks }) => {
     <li className="item">
       <div className="itemName">{task.name}</div>
       <div className="itemButtons">
-        <FaCheck className="itemCheck" />
+        <FaCheck className="itemCheck icon" />
 
-        <FaTrash className="itemDelete" />
+        <FaTrash className="itemDelete icon" />
       </div>
     </li>
   );
