@@ -81,7 +81,7 @@
   padding: 1.6rem 0.5rem;
   color: var(--text-secondary);
   transition: all 150ms ease;
-  letter-spacing: 2px;
+  letter-spacing: 0.5px;
   font-weight: 500;
 
   &:focus,
