@@ -21,10 +21,9 @@ const TaskModal = ({ setTasks, tasks, modalActive, setModalActive }) => {
     }
 
     const newTask = {
+      id: uuidv4(),
       name: taskName,
       completed: false,
-      color: 'default',
-      id: uuidv4(),
     };
 
     console.log(newTask);
