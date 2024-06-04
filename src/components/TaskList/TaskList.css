@@ -24,12 +24,12 @@
 
   &::-webkit-scrollbar {
     width: 0.8rem;
-    background-color: var(--color-tertiary);
+    background-color: var(--color-tertiary-darker);
     border-radius: 0.5rem;
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: var(--color-secondary);
+    background-color: var(--color-tertiary);
     border-radius: 0.5rem;
   }
 }

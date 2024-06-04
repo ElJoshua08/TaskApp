@@ -29,7 +29,7 @@
   padding-left: 10px;
   background-color: var(--card-color);
   transition: all 150ms ease;
-  letter-spacing: 2px;
+  letter-spacing: 0.5px;
 
   &::placeholder {
     color: var(--text-secondary);

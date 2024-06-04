@@ -19,15 +19,20 @@
   --color-primary-darker: #a80f0e;
   --color-secondary: #f15a59;
   --color-secondary-darker: #c14847;
+  --color-tertiary-lighter: #717397;
+  --color-tertiary: #61638b;
+  --color-tertiary-darker: #4e4f6f;
 
   --card-color: #161945;
-  --card-color-lighter: #1d2059;
+  --card-color-lighter: #24286d;
 
-  --check-color: lime;
-  --delete-color: red;
+  --check-color: #57d657;
+  --delete-color: #c53838;
 
   --text-primary: #fff;
   --text-secondary: #b8b8b8;
+
+  --text-item: #b7ffff;
 }
 
 * {
