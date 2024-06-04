@@ -10,7 +10,7 @@
   width: 250px;
   flex-grow: 1;
   border-radius: 0.5rem;
-  background-color: var(--color-secondary-darker);
+  background-color: var(--card-color);
   overflow-y: auto;
   overflow-x: hidden;
 
@@ -24,12 +24,12 @@
 
   &::-webkit-scrollbar {
     width: 0.8rem;
-    background-color: var(--color-tertiary);
+    background-color: var(--color-tertiary-darker);
     border-radius: 0.5rem;
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: var(--color-secondary);
+    background-color: var(--color-tertiary);
     border-radius: 0.5rem;
   }
 }

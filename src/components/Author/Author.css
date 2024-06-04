@@ -1,17 +1,21 @@
 .author {
   position: absolute;
-  bottom: 0.5rem;
-  right: 0.5rem;
+  bottom: 0.3rem;
+  right: 1rem;
   font-size: 1.4rem;
   z-index: -1;
   transition: all 250ms ease;
+  font-weight: 500;
+  letter-spacing: 1px;
 
   strong {
-    color: var(--color-primary-darker);
+    color: var(--color-secondary);
+    font-weight: 900;
   }
 
   a {
-    color: var(--color-primary);
+    color: var(--color-primary-lighter);
+    font-weight: 900;
     text-decoration: none;
     cursor: pointer;
     z-index: 999;

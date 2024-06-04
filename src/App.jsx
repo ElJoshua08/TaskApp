@@ -1,5 +1,5 @@
 import './App.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Author } from './components/Author/Author';
 import { NoTask } from './components/NoTask/NoTask';
 import { CreateTask } from './components/CreateTask/CreateTask';
@@ -15,17 +15,14 @@ function App() {
     return [];
   });
   const [search, setSearch] = useState('');
-  const [filters, setFilters] = useState({
-    completed: false,
-    incomplete: false,
-    all: true,
-  });
 
-  const saveToStorage = () => {
-    window.localStorage.setItem('tasks_v1', JSON.stringify(tasks));
-  };
+  useEffect(() => {
+    const saveToStorage = () => {
+      window.localStorage.setItem('tasks_v1', JSON.stringify(tasks));
+    };
 
-  saveToStorage();
+    saveToStorage();
+  }, [tasks]); // `useEffect` se ejecutará cada vez que `tasks` cambie
 
   return (
     <main>
@@ -39,10 +36,14 @@ function App() {
 
       {tasks.length > 0 ? (
         <TaskList>
-          {tasks.map((task) => (
-            < Item key={task.id} task={task} setTasks={setTasks} />
+          {tasks.filter((task) => task.name.toLowerCase().includes(search.toLowerCase())).map((task) => (
+            <Item
+              key={task.id}
+              task={task}
+              setTasks={setTasks}
+            />
           ))}
-        </ TaskList>
+        </TaskList>
       ) : (
         <NoTask />
       )}

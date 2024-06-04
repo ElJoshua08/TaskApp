@@ -26,10 +26,10 @@ const Item = ({ task, setTasks }) => {
       <div className="itemButtons">
         <FaCheck
           onClick={handleCheck}
-          className="itemCheck icon"
+          className="iconCheck icon"
         />
 
-        <FaTrash onClick={deleteItem} className="itemDelete icon" />
+        <FaTrash onClick={deleteItem} className="iconDelete icon" />
       </div>
     </li>
   );
