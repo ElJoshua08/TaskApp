@@ -12,18 +12,22 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --bg-color: #000a17;
+  --bg-color: #090909;
 
-  --color-primary: #ff204e;
-  --color-primary-darker: #cc1a3e;
-  --color-secondary: #a0153e;
-  --color-secondary-darker: #801132;
-  --color-tertiary: #5d0e41;
-  --color-tertiary-darker: #4a0b34;
-  --color-error: #ff3232;
+  --color-primary-lighter: #db4241;
+  --color-primary: #d21312;
+  --color-primary-darker: #a80f0e;
+  --color-secondary: #f15a59;
+  --color-secondary-darker: #c14847;
+
+  --card-color: #161945;
+  --card-color-lighter: #1d2059;
+
+  --check-color: lime;
+  --delete-color: red;
 
   --text-primary: #fff;
-  --text-secondary: #cecece;
+  --text-secondary: #b8b8b8;
 }
 
 * {
@@ -56,13 +60,6 @@ body {
 
 @media (prefers-color-scheme: light) {
   :root {
-    --bg-color: #e0dfd7;
-    --color-primary: #3992a8;
-    --color-primary-darker: #277a8f;
-    --color-secondary: #c6a632;
-    --color-secondary-darker: #8b7423;
-    --color-tertiary: #acacde;
-    --color-tertiary-darker: #8a8ab2;
-    color: #333;
+    /* TODO: change to your light theme color */
   }
 }
