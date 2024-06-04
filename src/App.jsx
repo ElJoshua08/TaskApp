@@ -6,6 +6,7 @@ import { CreateTask } from './components/CreateTask/CreateTask';
 import { Logo } from './components/Logo/Logo';
 import { SearchBar } from './components/SearchBar/SearchBar';
 import { Item } from './components/Item/Item';
+import { TaskList } from './components/TaskList/TaskList';
 
 function App() {
   const [tasks, setTasks] = useState(() => {
@@ -66,11 +67,11 @@ function App() {
       />
 
       {tasks.length > 0 ? (
-        <>
+        <TaskList>
           {filteredTasks.map((task) => (
             < Item key={task.id} task={task} setTasks={setTasks} />
           ))}
-        </>
+        </ TaskList>
       ) : (
         <NoTask />
       )}
