@@ -63,8 +63,4 @@ body {
   gap: 1rem;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    /* TODO: change to your light theme color */
-  }
-}
+/* TODO: Create colors for the light theme */
