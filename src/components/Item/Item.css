@@ -32,5 +32,10 @@
     font-size: 1.8rem;
     color: var(--color-primary);
     cursor: pointer;
+    transition: all 100ms ease;
+
+    &:hover {
+      color: var(--color-tertiary-darker);
+    }
   }
 }
