@@ -5,6 +5,7 @@ import { NoTask } from './components/NoTask/NoTask';
 import { CreateTask } from './components/CreateTask/CreateTask';
 import { Logo } from './components/Logo/Logo';
 import { SearchBar } from './components/SearchBar/SearchBar';
+import { Item } from './components/Item/Item';
 
 function App() {
   const [tasks, setTasks] = useState(() => {
@@ -67,10 +68,7 @@ function App() {
       {tasks.length > 0 ? (
         <>
           {filteredTasks.map((task) => (
-            <div key={task.id}>
-              <p>{task.name}</p>
-              <p>{task.description}</p>
-            </div>
+            < Item key={task.id} task={task} setTasks={setTasks} />
           ))}
         </>
       ) : (
