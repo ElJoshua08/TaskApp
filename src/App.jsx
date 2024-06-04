@@ -27,35 +27,6 @@ function App() {
 
   saveToStorage();
 
-  const applyFilters = (task, filters) => {
-    for (let filter in filters) {
-      // Skip the filter if it is set to false
-      if (!filters[filter]) continue;
-
-      // Apply filter conditions
-      switch (filter) {
-        case 'completed':
-          if (filters.completed && !task.completed) return false;
-          break;
-        case 'incompleted':
-          if (filters.incompleted && task.completed) return false;
-          break;
-        case 'all':
-          // 'all' filter, always include the task
-          break;
-        default:
-          // If there are more filters added, check their conditions here
-          if (filters[filter] !== task[filter]) return false;
-      }
-    }
-    return true;
-  };
-
-  const filteredTasks = tasks
-    .filter((task) => task.name.toLowerCase().includes(search.toLowerCase()))
-    .filter((task) => applyFilters(task, filters));
-
-
   return (
     <main>
       <Logo />
@@ -68,7 +39,7 @@ function App() {
 
       {tasks.length > 0 ? (
         <TaskList>
-          {filteredTasks.map((task) => (
+          {tasks.map((task) => (
             < Item key={task.id} task={task} setTasks={setTasks} />
           ))}
         </ TaskList>

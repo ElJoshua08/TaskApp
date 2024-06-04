@@ -53,10 +53,3 @@
     }
   }
 }
-
-@media (max-width: 435px) {
-  .searchBar {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}

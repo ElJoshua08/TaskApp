@@ -3,14 +3,14 @@ import './Item.css';
 
 const Item = ({ task, setTasks }) => {
   return (
-    <div className="item">
+    <li className="item">
       <div className="itemName">{task.name}</div>
       <div className="itemButtons">
         <FaCheck className="itemCheck" />
 
         <FaTrash className="itemDelete" />
       </div>
-    </div>
+    </li>
   );
 };
 
