@@ -64,3 +64,27 @@ body {
 }
 
 /* TODO: Create colors for the light theme */
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-color: #fff;
+
+    --text-primary: #181818;
+    --text-secondary: #585858;
+    --text-item: #232323;
+
+    --card-color: #ccc7a6;
+    --card-color-lighter: #fff9d0;
+
+    --color-primary-lighter: #8cc1f0;
+    --color-primary: #469fb6;
+    --color-primary-darker: #2d7e92;
+    --color-secondary: #21b1ff;
+    --color-secondary-darker: #188ece;
+    --color-tertiary-lighter: #caf4ff;
+    --color-tertiary: #caf4ff;
+    --color-tertiary-darker: #caf4ff;
+
+    --check-color: #4da34d;
+    --delete-color: #a33f3f;
+  }
+}

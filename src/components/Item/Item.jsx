@@ -8,7 +8,6 @@ const Item = ({ task, setTasks }) => {
   const handleCheck = () => {
     setIsCompleted(!isCompleted);
 
-    console.log(isCompleted);
     setTasks((tasks) =>
       tasks.map((t) =>
         t.id === task.id ? { ...t, completed: isCompleted } : t
@@ -22,7 +21,7 @@ const Item = ({ task, setTasks }) => {
 
   return (
     <li className={`item ${isCompleted ? 'completed' : ''}`}>
-      <div className="itemName">{task.name}</div>
+      <p className="itemName">{task.name}</p>
       <div className="itemButtons">
         <FaCheck
           onClick={handleCheck}
